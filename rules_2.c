@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rules_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/04/04 12:04:23 by ofadhel          ###   ########.fr       */
+/*   Created: 2023/04/04 11:54:01 by ofadhel           #+#    #+#             */
+/*   Updated: 2023/04/04 11:55:58 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.h""
 
+void    rot_a(t_stack )
+{
+    
+}
 
-int main(int ac, char **av)
+void    rot_b(t_stack )
+{
+
+}
+
+void    rot_ab(t_stack )
 {
     
 }
