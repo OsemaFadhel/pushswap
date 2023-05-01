@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rules_2.c                                          :+:      :+:    :+:   */
+/*   ft_putchars.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ofadhel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 11:54:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/01 17:25:24 by ofadhel          ###   ########.fr       */
+/*   Created: 2023/02/18 13:36:02 by ofadhel           #+#    #+#             */
+/*   Updated: 2023/02/18 14:10:15 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void	rot_a(t_list **stack_a)
-{
+int	ft_putchar(char c)
+{	
+	write(1, &c, 1);
+	return (1);
 }
 
-void	rot_b(t_list **stack_b)
+int	ft_putstr(char *str)
 {
-}
+	int	i;
 
-void	rot_ab(t_list **stack_a, t_list **stack_b)
-{
+	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (i);
 }

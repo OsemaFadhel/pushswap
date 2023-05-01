@@ -3,16 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ofadhel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/04/04 10:24:59 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/01 17:10:43 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <string.h>
+# include <stddef.h>
+# include <errno.h>
+# include "printf/ft_printf.h"
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
-# endif
+void	swap_a(t_list **stack_a);
+void	swap_b(t_list **stack_b);
+void	swap_ab(t_list **stack_a, t_list **stack_b);
+void	push_a(t_stack **stack_a, t_stack **stack_b);
+void	push_b(t_stack **stack_a, t_stack **stack_b);
+void	rot_a(t_stack **stack_a);
+void	rot_b(t_stack **stack_b);
+void	rot_ab(t_stack **stack_a, t_stack **stack_b);
+void	reverse_rot_a(t_stack **stack_a);
+void	reverse_rot_b(t_stack **stack_b);
+void	reverse_rot_ab(t_stack **stack_a, t_stack **stack_b);
+
+#endif
