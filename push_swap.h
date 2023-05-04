@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/01 20:11:16 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/04 17:28:22 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,6 @@
 # include "printf/ft_printf.h"
 # include "libft/libft.h"
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
 void	swap_a(t_list **stack_a);
 void	swap_b(t_list **stack_b);
 void	swap_ab(t_list **stack_a, t_list **stack_b);
@@ -39,5 +33,7 @@ void	rot_ab(t_list **stack_a, t_list **stack_b);
 void	reverse_rot_a(t_list **stack_a);
 void	reverse_rot_b(t_list **stack_b);
 void	reverse_rot_ab(t_list **stack_a, t_list **stack_b);
+
+void	ft_add_nb(t_list **stack_a, char **av);
 
 #endif

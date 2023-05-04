@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/01 19:21:25 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/04 17:34:46 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	if (ac == 2)
 	{
-		if (ft_strchr(av[1], ' '))
-			stack_a = ft_split(av[1], ' ');
-		else
-			stack_a = ft_split(av[1], '\n');
+		ft_add_nb2(&stack_a, av[1]);
 	}
-	else
-		stack_a = ft_split(av[1], ' ');
+	if (ac > 2)
+	{
+		ft_add_nb(&stack_a, av);
+	}
+	return (0);
 }
