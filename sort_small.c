@@ -6,12 +6,12 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 17:03:05 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 01:00:00 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/10 18:35:51 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	sort_three(t_list	**stack_a)
+/* void	sort_three(t_list	**stack_a)
 {
-}
+} */

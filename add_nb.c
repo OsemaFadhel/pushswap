@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 01:22:54 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/10 23:28:55 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 /*
 t_list	*ft_lstnew_1(int content)
@@ -31,14 +31,13 @@ void	ft_add_nb2(t_list **stack_a, char **av)
 	int		nb;
 	char	**tab;
 
-	j = 1;
-	while (av[j])
+	j = 0;
+	tab = ft_split(av[1], ' ');
+	while (tab[j])
 	{
-		tab = ft_split(av[j], ' ');
-		j = 0;
-		if (!ft_isdigit(av[j]))
+		if (ft_isdigit(tab[j]))
 		{
-			nb = ft_atoi(av[j]);
+			nb = ft_atoi(tab[j]);
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
 		}
 		else
@@ -55,7 +54,7 @@ void	ft_add_nb(t_list **stack_a, char **av)
 	j = 1;
 	while (av[j])
 	{
-		if (!ft_isdigit(av[j]))
+		if (ft_isdigit(av[j]))
 		{
 			nb = ft_atoi(av[j]);
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
