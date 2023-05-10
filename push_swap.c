@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/11 00:42:05 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:52:16 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,8 @@ int	main(int ac, char **av)
 	{
 		ft_add_nb(&stack_a, av);
 	}
+	ft_lstprint(stack_a);
+	sort_three(&stack_a);
+	ft_lstprint(stack_a);
 	return (0);
 }

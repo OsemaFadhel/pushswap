@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 18:29:57 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:49:13 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void	reverse_rot_ab(t_list **stack_a, t_list **stack_b);
 
 void	ft_add_nb(t_list **stack_a, char **av);
 void	ft_add_nb2(t_list **stack_a, char **av);
+
+void	sort_three(t_list **stack_a);
 
 #endif
