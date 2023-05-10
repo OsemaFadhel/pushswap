@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:54:52 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 18:35:20 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/10 23:36:25 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	reverse_rot_a(t_list **stack_a)
 	second_last->next = NULL;
 	last->next = *stack_a;
 	*stack_a = last;
+	ft_printf("rra\n");
 }
 
 void	reverse_rot_b(t_list **stack_b)
@@ -42,10 +43,12 @@ void	reverse_rot_b(t_list **stack_b)
 	second_last->next = NULL;
 	last->next = *stack_b;
 	*stack_b = last;
+	ft_printf("rrb\n");
 }
 
 void	reverse_rot_ab(t_list **stack_a, t_list **stack_b)
 {
 	reverse_rot_a(stack_a);
 	reverse_rot_b(stack_b);
+	ft_printf("rrr\n");
 }

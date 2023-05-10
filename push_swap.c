@@ -6,11 +6,21 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 18:35:29 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:42:05 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_lstprint(t_list *lst)
+{
+	while (lst)
+	{
+		ft_printf("%d\n", lst->content);
+		lst = lst->next;
+	}
+	return (0);
+}
 
 int	main(int ac, char **av)
 {
