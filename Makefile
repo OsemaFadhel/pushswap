@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/05/11 00:55:22 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/05/11 01:28:22 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIBFT 	= $(LIBFT_PATH)
 PRINTF_PATH	= ./printf
 PRINTF	= $(PRINTF_PATH)
 SRC	=  push_swap.c add_nb.c rules_1.c rules_2.c rules_3.c \
-		sort_three.c
+		algorithm.c
 OBJ	= 	$(SRC:.c=.o)
 CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror

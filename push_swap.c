@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/11 00:52:16 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/11 04:11:06 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,33 @@ int	ft_lstprint(t_list *lst)
 		lst = lst->next;
 	}
 	return (0);
+}
+
+void	sort_three(t_list **stack_a)
+{
+	int	a;
+	int	b;
+	int	c;
+
+	a = (*stack_a)->content;
+	b = (*stack_a)->next->content;
+	c = (*stack_a)->next->next->content;
+	if (a > b && b < c && a < c)
+		swap_a(stack_a);
+	else if (a > b && b > c && a > c)
+	{
+		swap_a(stack_a);
+		reverse_rot_a(stack_a);
+	}
+	else if (a > b && b < c && a > c)
+		rot_a(stack_a);
+	else if (a < b && b > c && a < c)
+	{
+		swap_a(stack_a);
+		rot_a(stack_a);
+	}
+	else if (a < b && b > c && a > c)
+		reverse_rot_a(stack_a);
 }
 
 int	main(int ac, char **av)
