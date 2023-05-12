@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/11 04:11:06 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/12 19:58:08 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
+	int		size;
 
 	if (ac < 2)
 	{
@@ -63,14 +64,15 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	if (ac == 2)
 	{
-		ft_add_nb2(&stack_a, av);
+		size = ft_add_nb2(&stack_a, av);
 	}
 	if (ac > 2)
 	{
-		ft_add_nb(&stack_a, av);
+		size = ft_add_nb(&stack_a, av);
 	}
+	ft_printf("%d", size);
 	ft_lstprint(stack_a);
-	sort_three(&stack_a);
+	algorithm(&stack_a, &stack_b, size);
 	ft_lstprint(stack_a);
 	return (0);
 }

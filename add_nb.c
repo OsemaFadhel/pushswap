@@ -6,26 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 23:28:55 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/12 19:58:54 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
-t_list	*ft_lstnew_1(int content)
-{
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-} */
-
-void	ft_add_nb2(t_list **stack_a, char **av)
+int	ft_add_nb2(t_list **stack_a, char **av)
 {
 	int		j;
 	int		nb;
@@ -44,9 +31,10 @@ void	ft_add_nb2(t_list **stack_a, char **av)
 			ft_printf("Error: Invalid argument!\n");
 		j++;
 	}
+	return (j - 1);
 }
 
-void	ft_add_nb(t_list **stack_a, char **av)
+int	ft_add_nb(t_list **stack_a, char **av)
 {
 	int		j;
 	int		nb;
@@ -63,4 +51,5 @@ void	ft_add_nb(t_list **stack_a, char **av)
 			ft_printf("Error: Invalid argument!\n");
 		j++;
 	}
+	return (j - 1);
 }
