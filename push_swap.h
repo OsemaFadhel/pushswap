@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/12 20:03:35 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/16 22:58:43 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,14 @@ int		ft_add_nb(t_list **stack_a, char **av);
 int		ft_add_nb2(t_list **stack_a, char **av);
 int		ft_lstprint(t_list *lst);
 
-void	sort_three(t_list **stack_a);
 void	algorithm(t_list **stack_a, t_list **stack_b, int size);
+void	sort_two(t_list **stack_a);
+void	sort_three(t_list **stack_a);
+void	turk(t_list **stack_a, t_list **stack_b);
+void	ft_sort_b(t_list **stack_a, t_list **stack_b);
+void	ft_sort_a(t_list **stack_a, t_list **stack_b);
+
+int		check_sorted(t_list **stack_a);
+void	error(int i);
 
 #endif

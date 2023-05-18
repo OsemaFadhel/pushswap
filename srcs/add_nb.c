@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/12 19:58:54 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/16 22:06:40 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_add_nb2(t_list **stack_a, char **av)
 {

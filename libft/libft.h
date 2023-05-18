@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 09:10:17 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 01:18:37 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/16 18:52:38 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	ft_putnbr_fd(int n, int fd);
 
 /* Bonus */
 int		ft_lstsize(t_list *lst);
+int		ft_lstprint(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **alst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(int *));

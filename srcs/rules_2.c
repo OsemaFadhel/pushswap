@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:54:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/10 23:36:45 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/16 19:34:42 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rot_a(t_list **stack_a)
 {

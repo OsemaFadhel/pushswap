@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/16 22:47:57 by ofadhel          ###   ########.fr       */
+/*   Created: 2023/05/16 18:51:22 by ofadhel           #+#    #+#             */
+/*   Updated: 2023/05/16 18:54:52 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
+#include "../printf/ft_printf.h"
 
-int	main(int ac, char **av)
+int	ft_lstprint(t_list *lst)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
-	int		size;
-
-	if (ac < 2)
-		error(1);
-	stack_a = NULL;
-	stack_b = NULL;
-	if (ac == 2)
-		size = ft_add_nb2(&stack_a, av);
-	if (ac > 2)
-		size = ft_add_nb(&stack_a, av);
-	algorithm(&stack_a, &stack_b, size);
-	ft_lstprint(stack_a);
-	if (!check_sorted(&stack_a))
-		error(4);
-	ft_printf("SORTED\n");
-	ft_lstprint(stack_b);
+	while (lst)
+	{
+		ft_printf("%d\n", lst->content);
+		lst = lst->next;
+	}
 	return (0);
 }
