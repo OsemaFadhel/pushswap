@@ -6,13 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 11:49:13 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/16 19:34:42 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/23 23:22:52 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap_a(t_list **stack_a)
+int	swap_a(t_list **stack_a)
 {
 	t_list	*tmp;
 
@@ -24,9 +24,10 @@ void	swap_a(t_list **stack_a)
 		*stack_a = tmp;
 	}
 	ft_printf("sa\n");
+	return (1);
 }
 
-void	swap_b(t_list **stack_b)
+int	swap_b(t_list **stack_b)
 {
 	t_list	*tmp;
 
@@ -38,16 +39,18 @@ void	swap_b(t_list **stack_b)
 		*stack_b = tmp;
 	}
 	ft_printf("sb\n");
+	return (1);
 }
 
-void	swap_ab(t_list **stack_a, t_list **stack_b)
+int	swap_ab(t_list **stack_a, t_list **stack_b)
 {
 	swap_a(stack_a);
 	swap_b(stack_b);
 	ft_printf("ss\n");
+	return (2);
 }
 
-void	push_a(t_list **stack_a, t_list **stack_b)
+int	push_a(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
 
@@ -59,9 +62,10 @@ void	push_a(t_list **stack_a, t_list **stack_b)
 		*stack_a = tmp;
 	}
 	ft_printf("pa\n");
+	return (1);
 }
 
-void	push_b(t_list **stack_a, t_list **stack_b)
+int	push_b(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
 
@@ -73,4 +77,5 @@ void	push_b(t_list **stack_a, t_list **stack_b)
 		*stack_b = tmp;
 	}
 	ft_printf("pb\n");
+	return (1);
 }
