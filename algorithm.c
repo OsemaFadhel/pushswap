@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/23 23:31:02 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/24 22:33:52 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	sort_three(t_list **stack_a)
 		reverse_rot_a(stack_a);
 }
 
-/*void	ft_turk(t_list **stack_a, t_list **stack_b)
+void	ft_turk(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
 
@@ -59,7 +59,7 @@ void	sort_three(t_list **stack_a)
 	push_b(stack_a, stack_b);
 	ft_sort_b(stack_a, stack_b);
 	ft_sort_a(stack_a, stack_b);
-}*/
+}
 
 void	algorithm(t_list **stack_a, t_list **stack_b, int size)
 {
@@ -78,6 +78,6 @@ void	algorithm(t_list **stack_a, t_list **stack_b, int size)
 	}
 	else
 	{
-		//ft_turk(stack_a, stack_b);
+		ft_turk(stack_a, stack_b);
 	}
 }

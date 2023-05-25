@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_move.c                                       :+:      :+:    :+:   */
+/*   min_max.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 20:00:41 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:17:25 by ofadhel          ###   ########.fr       */
+/*   Created: 2023/05/25 19:11:37 by ofadhel           #+#    #+#             */
+/*   Updated: 2023/05/25 19:14:04 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	get_max(t_list **stack_a, int *max)
 {
@@ -53,30 +53,4 @@ void	get_min_max(t_list **stack_a, int min, int man)
 			max = tmp->content;
 		tmp = tmp->next;
 	}
-}
-
-void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
-{
-	if (strcmp(operation, "sa") == 0)
-		swap_a(*stack_a);
-	else if (strcmp(operation, "sb") == 0)
-		swap_b(stack_b);
-	else if (strcmp(operation, "ss") == 0)
-		swap_ab(stack_a, stack_b);
-	else if (strcmp(operation, "pa") == 0)
-		push_a(stack_a, stack_b);
-	else if (strcmp(operation, "pb") == 0)
-		push_b(stack_a, stack_b);
-	else if (strcmp(operation, "ra") == 0)
-		rotate_(*stack_a);
-	else if (strcmp(operation, "rb") == 0)
-		rot_b(stack_b);
-	else if (strcmp(operation, "rr") == 0)
-		rot_ab(stack_a, stack_b);
-	else if (strcmp(operation, "rra") == 0)
-		reverse_rot_a(stack_a);
-	else if (strcmp(operation, "rrb") == 0)
-		reverse_rot_ab(stack_a, stack_b);
-	else if (strcmp(operation, "rrr") == 0)
-		reverse_rot_ab(stack_a, stack_b);
 }
