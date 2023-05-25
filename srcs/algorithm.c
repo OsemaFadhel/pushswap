@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/24 22:33:52 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/25 19:33:55 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sort_two(t_list **stack_a)
 {
@@ -50,7 +50,7 @@ void	sort_three(t_list **stack_a)
 		reverse_rot_a(stack_a);
 }
 
-void	ft_turk(t_list **stack_a, t_list **stack_b)
+/*void	ft_turk(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
 
@@ -59,7 +59,7 @@ void	ft_turk(t_list **stack_a, t_list **stack_b)
 	push_b(stack_a, stack_b);
 	ft_sort_b(stack_a, stack_b);
 	ft_sort_a(stack_a, stack_b);
-}
+}*/
 
 void	algorithm(t_list **stack_a, t_list **stack_b, int size)
 {

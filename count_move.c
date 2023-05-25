@@ -6,56 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 20:00:41 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:17:25 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/25 19:29:38 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_max(t_list **stack_a, int *max)
-{
-	t_list	*tmp;
-
-	tmp = *stack_a;
-	*max = tmp->content;
-	while (tmp)
-	{
-		if (tmp->content > *max)
-			*max = tmp->content;
-		tmp = tmp->next;
-	}
-}
-
-void	get_min(t_list **stack_b, int *min)
-{
-	t_list	*tmp;
-
-	tmp = *stack_b;
-	*min = tmp->content;
-	while (tmp)
-	{
-		if (tmp->content > *min)
-			*min = tmp->content;
-		tmp = tmp->next;
-	}
-}
-
-void	get_min_max(t_list **stack_a, int min, int man)
-{
-	t_list	*tmp;
-
-	tmp = *stack_a;
-	while (tmp)
-	{
-		if (tmp->content < min)
-			min = tmp->content;
-		if (tmp->content > max)
-			max = tmp->content;
-		tmp = tmp->next;
-	}
-}
-
-void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
+/*void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
 {
 	if (strcmp(operation, "sa") == 0)
 		swap_a(*stack_a);
@@ -79,4 +36,4 @@ void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
 		reverse_rot_ab(stack_a, stack_b);
 	else if (strcmp(operation, "rrr") == 0)
 		reverse_rot_ab(stack_a, stack_b);
-}
+}*/
