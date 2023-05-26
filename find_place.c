@@ -6,22 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 22:19:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 22:48:12 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 22:57:30 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* int	ft_find_index(t_list *a, int c)
-{
-	int		i;
-
-	i = 0;
-	while (a->content != c)
-	{
-		i++;
-		a = a->next;
-	}
-	return (i);
-} */
+#include "push_swap.h"
 
 int	search_index(t_list *a, int nbr)
 {

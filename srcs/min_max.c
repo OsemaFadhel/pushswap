@@ -6,13 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:11:37 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 21:36:08 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 22:54:32 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	get_max(t_list **stack_a, int *max)
+int	get_max(t_list **stack_a, int *max)
 {
 	t_list	*tmp;
 
@@ -24,9 +24,10 @@ void	get_max(t_list **stack_a, int *max)
 			*max = tmp->content;
 		tmp = tmp->next;
 	}
+	return (*max);
 }
 
-void	get_min(t_list **stack_b, int *min)
+int	get_min(t_list **stack_b, int *min)
 {
 	t_list	*tmp;
 
@@ -38,19 +39,5 @@ void	get_min(t_list **stack_b, int *min)
 			*min = tmp->content;
 		tmp = tmp->next;
 	}
-}
-
-void	get_min_max(t_list **stack_a, int *min, int *max)
-{
-	t_list	*tmp;
-
-	tmp = *stack_a;
-	while (tmp)
-	{
-		if (tmp->content < min)
-			min = tmp->content;
-		if (tmp->content > max)
-			max = tmp->content;
-		tmp = tmp->next;
-	}
+	return (*min);
 }
