@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 23:00:03 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 23:23:17 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	ft_turk(t_list **stack_a, t_list **stack_b)
 	push_b(stack_a, stack_b);
 	push_b(stack_a, stack_b);
 	ft_sort_b(stack_a, stack_b);
+	ft_sort_three(stack_a);
 	ft_sort_a(stack_a, stack_b);
 }
 
