@@ -6,38 +6,40 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:11:37 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 22:54:32 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 22:59:27 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	get_max(t_list **stack_a, int *max)
+int	get_max(t_list **stack)
 {
 	t_list	*tmp;
+	int		max;
 
-	tmp = *stack_a;
-	*max = tmp->content;
+	tmp = *stack;
+	max = tmp->content;
 	while (tmp)
 	{
-		if (tmp->content > *max)
-			*max = tmp->content;
+		if (tmp->content > max)
+			max = tmp->content;
 		tmp = tmp->next;
 	}
-	return (*max);
+	return (max);
 }
 
-int	get_min(t_list **stack_b, int *min)
+int	get_min(t_list **stack)
 {
 	t_list	*tmp;
+	int		min;
 
-	tmp = *stack_b;
-	*min = tmp->content;
+	tmp = *stack;
+	min = tmp->content;
 	while (tmp)
 	{
-		if (tmp->content < *min)
-			*min = tmp->content;
+		if (tmp->content < min)
+			min = tmp->content;
 		tmp = tmp->next;
 	}
-	return (*min);
+	return (min);
 }

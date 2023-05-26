@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 22:55:50 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 23:04:04 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ void	ft_sort_b(t_list **stack_a, t_list **stack_b);
 void	ft_sort_a(t_list **stack_a, t_list **stack_b);
 int		ft_count_moves(t_list **stack_a, t_list **stack_b);
 
-int		get_max(t_list **stack_a);
-int		get_min(t_list **stack_a);
+int		get_max(t_list **stack);
+int		get_min(t_list **stack);
 
 int		search_index(t_list *a, int nbr);
-int		ft_find_a(t_list *stack_a, int nbr_push);
-int		ft_find_b(t_list *stack_b, int nbr_push);
+int		search_a(t_list *stack_a, int c);
+int		search_b(t_list *stack_b, int c);
 //int		ft_find_index(t_list *a, int c);
 
 int		check_sorted(t_list **stack_a);

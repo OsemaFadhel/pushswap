@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 22:19:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/26 22:57:30 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 23:04:19 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	search_index(t_list *a, int nbr)
 {
@@ -27,7 +27,7 @@ int	search_index(t_list *a, int nbr)
 	return (i);
 }
 
-int	ft_find_b(t_list *stack_b, int c)
+int	search_b(t_list *stack_b, int c)
 {
 	int		i;
 	t_list	*tmp;
@@ -50,7 +50,7 @@ int	ft_find_b(t_list *stack_b, int c)
 	return (i);
 }
 
-int	ft_find_a(t_list *stack_a, int c)
+int	search_a(t_list *stack_a, int c)
 {
 	int		i;
 	t_list	*tmp;
