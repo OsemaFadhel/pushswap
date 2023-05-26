@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:11:37 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:14:04 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/26 21:36:08 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ void	get_min(t_list **stack_b, int *min)
 	*min = tmp->content;
 	while (tmp)
 	{
-		if (tmp->content > *min)
+		if (tmp->content < *min)
 			*min = tmp->content;
 		tmp = tmp->next;
 	}
 }
 
-void	get_min_max(t_list **stack_a, int min, int man)
+void	get_min_max(t_list **stack_a, int *min, int *max)
 {
 	t_list	*tmp;
 

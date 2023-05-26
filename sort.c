@@ -6,13 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:30:23 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/25 19:54:10 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*int	ft_count_moves(t_list **stack_a, t_list **stack_b)
+int	ft_count_moves(t_list **stack_a, t_list **stack_b)
 {
 	int	i;
 	int	j;
@@ -66,4 +66,4 @@ void	ft_sort_b(t_list **stack_a, t_list **stack_b)
 	ft_sort_three(stack_a);
 	ft_sort_a(stack_a, stack_b);
 	ft_sort(stack_a, stack_b);
-}*/
+}

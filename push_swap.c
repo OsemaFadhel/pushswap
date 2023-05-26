@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:40:46 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/25 20:01:11 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(int ac, char **av)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
-	int		size;
+	t_list		*stack_a;
+	t_list		*stack_b;
+	int			size;
 
 	if (ac < 2)
 		error(1);

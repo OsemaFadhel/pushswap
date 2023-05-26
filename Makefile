@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/05/25 19:47:06 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/05/26 21:36:41 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,4 +39,3 @@ fclean	:	clean
 			rm -rf $(NAME)
 
 re		:	fclean all
-

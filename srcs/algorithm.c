@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/25 19:33:55 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/25 19:50:11 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,6 @@ void	algorithm(t_list **stack_a, t_list **stack_b, int size)
 	}
 	else
 	{
-		ft_turk(stack_a, stack_b);
+		//ft_turk(stack_a, stack_b);
 	}
 }
