@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/05/27 19:31:06 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/05/27 21:32:51 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,10 @@ LIBFT_PATH 	= ./libft
 LIBFT 	= $(LIBFT_PATH)
 PRINTF_PATH	= ./printf
 PRINTF	= $(PRINTF_PATH)
-SRC	=  	push_swap.c sort.c count_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
+SRC	=  	push_swap.c sort.c apply_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
 		srcs/rules_1.c srcs/rules_2.c srcs/rules_3.c \
 		srcs/error.c srcs/min_max.c srcs/find_place.c \
-		count_rot.c
+		srcs/count_move.c
 OBJ	= 	$(SRC:.c=.o)
 CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror

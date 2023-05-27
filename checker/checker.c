@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 18:52:39 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 18:52:45 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/27 21:28:59 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- /*void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
+/*void	apply_operation(char *operation, t_list **stack_a, t_list **stack_b)
 {
 	if (strcmp(operation, "sa") == 0)
 		swap_a(*stack_a);

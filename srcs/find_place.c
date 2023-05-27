@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 22:19:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 19:18:27 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/27 21:46:16 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	search_b(t_list *stack_b, int c)
 	t_list	*tmp;
 
 	i = 1;
-	if (c > stack_b->content && c < ft_lstlast((stack_b)->content))
+	if (c > stack_b->content && c < ft_lstlast(stack_b)->content)
 		i = 0;
 	else if (c > get_max(stack_b) || c < get_min(stack_b))
 		i = search_index(stack_b, get_max(stack_b));
@@ -56,7 +56,7 @@ int	search_a(t_list *stack_a, int c)
 	t_list	*tmp;
 
 	i = 1;
-	if (c < stack_a->content && c > ft_lstlast((stack_a)->content))
+	if (c < stack_a->content && c > ft_lstlast(stack_a)->content)
 		i = 0;
 	else if (c > get_max(stack_a) || c < get_min(stack_a))
 		i = search_index(stack_a, get_min(stack_a));

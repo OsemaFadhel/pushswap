@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 19:34:22 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/27 21:43:37 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,24 @@ void	ft_sort_b(t_list **stack_a, t_list **stack_b);
 void	ft_sort_a(t_list **stack_a, t_list **stack_b);
 int		ft_count_moves(t_list **stack_a, t_list **stack_b);
 
-int		get_max(t_list **stack);
-int		get_min(t_list **stack);
+int		get_max(t_list *stack);
+int		get_min(t_list *stack);
 
 int		search_index(t_list *a, int nbr);
 int		search_a(t_list *stack_a, int c);
 int		search_b(t_list *stack_b, int c);
 //int		ft_find_index(t_list *a, int c);
 
-int		rotate_type_ab(t_list *a, t_list *b);
+int		count_ab(t_list *a, t_list *b);
 int		rarb(t_list *stack_a, t_list *stack_b, int c);
 int		rrarrb(t_list *stack_a, t_list *stack_b, int c);
 int		rrarb(t_list *stack_a, t_list *stack_b, int c);
 int		rarrb(t_list *stack_a, t_list *stack_b, int c);
+
+int		apply_rarb(t_list **a, t_list **b, int c, char s);
+int		apply_rrarrb(t_list **a, t_list **b, int c, char s);
+int		apply_rrarb(t_list **a, t_list **b, int c, char s);
+int		apply_rarrb(t_list **a, t_list **b, int c, char s);
 
 int		check_sorted(t_list **stack_a);
 void	error(int i);
