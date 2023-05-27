@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 22:21:10 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/05/27 22:22:00 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int	ft_case_rarb_a(t_list *a, t_list *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for rra+rrb case.
 int	ft_case_rrarrb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
@@ -36,8 +34,6 @@ int	ft_case_rrarrb_a(t_list *a, t_list *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for ra+rrb case.
 int	ft_case_rarrb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
@@ -49,8 +45,6 @@ int	ft_case_rarrb_a(t_list *a, t_list *b, int c)
 	return (i);
 }
 
-// This function calculates the required amount of rotation.
-// Calculations are done for rra+rb case.
 int	ft_case_rrarb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
