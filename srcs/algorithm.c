@@ -6,11 +6,18 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 22:22:49 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/06 21:22:23 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+t_list	*ft_lstfirst(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	return (lst);
+}
 
 void	sort_two(t_list **stack_a)
 {
@@ -58,8 +65,11 @@ void	ft_turk(t_list **stack_a, t_list **stack_b)
 	push_b(stack_a, stack_b);
 	push_b(stack_a, stack_b);
 	ft_sort_b(stack_a, stack_b);
-	sort_three(stack_a);
+	if (ft_lstsize(*stack_a) == 3)
+		sort_three(stack_a);
 	ft_sort_a(stack_a, stack_b);
+	if (ft_lstlast(*stack_a)->content < ft_lstfirst(*stack_a)->content)
+		reverse_rot_a(stack_a);
 }
 
 void	algorithm(t_list **stack_a, t_list **stack_b, int size)

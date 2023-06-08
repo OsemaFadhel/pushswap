@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 22:22:35 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/06 21:18:39 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,6 @@ void	ft_sort_b(t_list **stack_a, t_list **stack_b)
 			tmp = tmp->next;
 		i++;
 	}
+	ft_printf("staCkB\n");
 	ft_lstprint(*stack_b);
 }
