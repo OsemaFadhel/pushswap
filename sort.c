@@ -6,55 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/06 21:18:39 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/09 20:07:07 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	ft_case_rarb_a(t_list *a, t_list *b, int c)
-{
-	int	i;
-
-	i = search_a(a, c);
-	if (i < search_index(b, c))
-		i = search_index(b, c);
-	return (i);
-}
-
-int	ft_case_rrarrb_a(t_list *a, t_list *b, int c)
-{
-	int	i;
-
-	i = 0;
-	if (search_a(a, c))
-		i = ft_lstsize(a) - search_a(a, c);
-	if ((i < (ft_lstsize(b) - search_index(b, c))) && search_index(b, c))
-		i = ft_lstsize(b) - search_index(b, c);
-	return (i);
-}
-
-int	ft_case_rarrb_a(t_list *a, t_list *b, int c)
-{
-	int	i;
-
-	i = 0;
-	if (search_index(b, c))
-		i = ft_lstsize(b) - search_index(b, c);
-	i = search_a(a, c) + i;
-	return (i);
-}
-
-int	ft_case_rrarb_a(t_list *a, t_list *b, int c)
-{
-	int	i;
-
-	i = 0;
-	if (search_a(a, c))
-		i = ft_lstsize(a) - search_a(a, c);
-	i = search_index(b, c) + i;
-	return (i);
-}
 
 int	count_ab(t_list *a, t_list *b)
 {
@@ -84,17 +40,17 @@ int	ft_rotate_type_ba(t_list *a, t_list *b)
 	t_list	*tmp;
 
 	tmp = b;
-	i = ft_case_rrarrb_a(a, b, b->content);
+	i = rrarrb(b, a, b->content);
 	while (tmp)
 	{
-		if (i > ft_case_rarb_a(a, b, tmp->content))
-			i = ft_case_rarb_a(a, b, tmp->content);
-		if (i > ft_case_rrarrb_a(a, b, tmp->content))
-			i = ft_case_rrarrb_a(a, b, tmp->content);
-		if (i > ft_case_rarrb_a(a, b, tmp->content))
-			i = ft_case_rarrb_a(a, b, tmp->content);
-		if (i > ft_case_rrarb_a(a, b, tmp->content))
-			i = ft_case_rrarb_a(a, b, tmp->content);
+		if (i > rarb(b, a, tmp->content))
+			i = rarb(b, a, tmp->content);
+		if (i > rrarrb(b, a, tmp->content))
+			i = rrarrb(b, a, tmp->content);
+		if (i > rarrb(b, a, tmp->content))
+			i = rarrb(b, a, tmp->content);
+		if (i > rrarb(b, a, tmp->content))
+			i = rrarb(b, a, tmp->content);
 		tmp = tmp->next;
 	}
 	return (i);
@@ -111,13 +67,13 @@ void	ft_sort_a(t_list **stack_a, t_list **stack_b)
 		i = ft_rotate_type_ba(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if (i == ft_case_rarb_a(*stack_a, *stack_b, tmp->content))
+			if (i == rarb(*stack_b, *stack_a, tmp->content))
 				i = apply_rarb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == ft_case_rarrb_a(*stack_a, *stack_b, tmp->content))
+			else if (i == rarrb(*stack_b, *stack_a, tmp->content))
 				i = apply_rarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == ft_case_rrarrb_a(*stack_a, *stack_b, tmp->content))
+			else if (i == rrarrb(*stack_b, *stack_a, tmp->content))
 				i = apply_rrarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == ft_case_rrarb_a(*stack_a, *stack_b, tmp->content))
+			else if (i == rrarb(*stack_b, *stack_a, tmp->content))
 				i = apply_rrarb(stack_a, stack_b, tmp->content, 'b');
 			else
 				tmp = tmp->next;

@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 19:19:13 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/27 21:42:31 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/09 19:51:30 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	apply_rarb(t_list **a, t_list **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate both list_a and list_b in the
-// reverse direction as required amount.
 int	apply_rrarrb(t_list **a, t_list **b, int c, char s)
 {
 	if (s == 'a')
@@ -64,8 +62,6 @@ int	apply_rrarrb(t_list **a, t_list **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate the list_a in reverse direction,
-// the list_b in oppsite direction of list_a as required amount.
 int	apply_rrarb(t_list **a, t_list **b, int c, char s)
 {
 	if (s == 'a')
@@ -87,8 +83,6 @@ int	apply_rrarb(t_list **a, t_list **b, int c, char s)
 	return (-1);
 }
 
-// This function rotate the list_b in reverse direction,
-// the list_a in oppsite direction of list_a as required amount.
 int	apply_rarrb(t_list **a, t_list **b, int c, char s)
 {
 	if (s == 'a')
