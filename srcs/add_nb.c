@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/05/16 22:06:40 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/09 18:01:48 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int	ft_add_nb2(t_list **stack_a, char **av)
 			ft_printf("Error: Invalid argument!\n");
 		j++;
 	}
+	nb = 0;
+	while (tab)
+		free (tab[nb++]);
 	return (j - 1);
 }
 
