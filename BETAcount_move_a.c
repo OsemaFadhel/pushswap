@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_move_a.c                                     :+:      :+:    :+:   */
+/*   BETAcount_move_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 19:50:34 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/09 19:52:59 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/13 17:47:55 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_case_rarb_a(t_list *a, t_list *b, int c)
+int	rarb_a(t_list *a, t_list *b, int c)
 {
-	int	i;
-
 	i = search_a(a, c);
 	if (i < search_index(b, c))
 		i = search_index(b, c);
 	return (i);
 }
 
-int	ft_case_rrarrb_a(t_list *a, t_list *b, int c)
+int	rrarrb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
 
@@ -34,7 +32,7 @@ int	ft_case_rrarrb_a(t_list *a, t_list *b, int c)
 	return (i);
 }
 
-int	ft_case_rarrb_a(t_list *a, t_list *b, int c)
+int	rarrb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
 
@@ -45,7 +43,7 @@ int	ft_case_rarrb_a(t_list *a, t_list *b, int c)
 	return (i);
 }
 
-int	ft_case_rrarb_a(t_list *a, t_list *b, int c)
+int	rrarb_a(t_list *a, t_list *b, int c)
 {
 	int	i;
 

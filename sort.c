@@ -6,51 +6,51 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/09 20:07:07 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/20 22:22:23 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_ab(t_list *a, t_list *b)
+int	count_ab(t_list *stack_a, t_list *stack_b)
 {
 	int		i;
 	t_list	*tmp;
 
-	tmp = a;
-	i = rrarrb(a, b, a->content);
+	tmp = stack_a;
+	i = rrarrb(stack_a, stack_b, stack_a->content, 'b');
 	while (tmp)
 	{
-		if (i > rarb(a, b, tmp->content))
-			i = rarb(a, b, tmp->content);
-		if (i > rrarrb(a, b, tmp->content))
-			i = rrarrb(a, b, tmp->content);
-		if (i > rarrb(a, b, tmp->content))
-			i = rarrb(a, b, tmp->content);
-		if (i > rrarb(a, b, tmp->content))
-			i = rrarb(a, b, tmp->content);
+		if (i > rarb(stack_a, stack_b, tmp->content, 'b'))
+			i = rarb(stack_a, stack_b, tmp->content, 'b');
+		if (i > rrarrb(stack_a, stack_b, tmp->content, 'b'))
+			i = rrarrb(stack_a, stack_b, tmp->content, 'b');
+		if (i > rarrb(stack_a, stack_b, tmp->content, 'b'))
+			i = rarrb(stack_a, stack_b, tmp->content, 'b');
+		if (i > rrarb(stack_a, stack_b, tmp->content, 'b'))
+			i = rrarb(stack_a, stack_b, tmp->content, 'b');
 		tmp = tmp->next;
 	}
 	return (i);
 }
 
-int	ft_rotate_type_ba(t_list *a, t_list *b)
+int	count_ba(t_list *stack_a, t_list *stack_b)
 {
 	int		i;
 	t_list	*tmp;
 
-	tmp = b;
-	i = rrarrb(b, a, b->content);
+	tmp = stack_b;
+	i = rrarrb(stack_a, stack_b, stack_b->content, 'a');
 	while (tmp)
 	{
-		if (i > rarb(b, a, tmp->content))
-			i = rarb(b, a, tmp->content);
-		if (i > rrarrb(b, a, tmp->content))
-			i = rrarrb(b, a, tmp->content);
-		if (i > rarrb(b, a, tmp->content))
-			i = rarrb(b, a, tmp->content);
-		if (i > rrarb(b, a, tmp->content))
-			i = rrarb(b, a, tmp->content);
+		if (i > rarb(stack_a, stack_b, tmp->content, 'a'))
+			i = rarb(stack_a, stack_b, tmp->content, 'a');
+		if (i > rrarrb(stack_a, stack_b, tmp->content, 'a'))
+			i = rrarrb(stack_a, stack_b, tmp->content, 'a');
+		if (i > rarrb(stack_a, stack_b, tmp->content, 'a'))
+			i = rarrb(stack_a, stack_b, tmp->content, 'a');
+		if (i > rrarb(stack_a, stack_b, tmp->content, 'a'))
+			i = rrarb(stack_a, stack_b, tmp->content, 'a');
 		tmp = tmp->next;
 	}
 	return (i);
@@ -64,17 +64,17 @@ void	ft_sort_a(t_list **stack_a, t_list **stack_b)
 	while (*stack_b)
 	{
 		tmp = *stack_b;
-		i = ft_rotate_type_ba(*stack_a, *stack_b);
+		i = count_ba(*stack_a, *stack_b);
 		while (i >= 0)
 		{
-			if (i == rarb(*stack_b, *stack_a, tmp->content))
-				i = apply_rarb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == rarrb(*stack_b, *stack_a, tmp->content))
-				i = apply_rarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == rrarrb(*stack_b, *stack_a, tmp->content))
-				i = apply_rrarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (i == rrarb(*stack_b, *stack_a, tmp->content))
-				i = apply_rrarb(stack_a, stack_b, tmp->content, 'b');
+			if (i == rarb(*stack_a, *stack_b, tmp->content, 'a'))
+				i = apply_rarb(stack_a, stack_b, tmp->content, 'a');
+			else if (i == rarrb(*stack_a, *stack_b, tmp->content, 'a'))
+				i = apply_rarrb(stack_a, stack_b, tmp->content, 'a');
+			else if (i == rrarrb(*stack_a, *stack_b, tmp->content, 'a'))
+				i = apply_rrarrb(stack_a, stack_b, tmp->content, 'a');
+			else if (i == rrarb(*stack_a, *stack_b, tmp->content, 'a'))
+				i = apply_rrarb(stack_a, stack_b, tmp->content, 'a');
 			else
 				tmp = tmp->next;
 		}
@@ -92,18 +92,18 @@ void	ft_sort_b(t_list **stack_a, t_list **stack_b)
 	{
 		tmp = *stack_a;
 		j = count_ab(*stack_a, *stack_b);
-		if (j == rarb(*stack_a, *stack_b, tmp->content))
-			j = apply_rarb(stack_a, stack_b, tmp->content, 'a');
-		else if (j == rrarrb(*stack_a, *stack_b, tmp->content))
-			j = apply_rrarrb(stack_a, stack_b, tmp->content, 'a');
-		else if (j == rarrb(*stack_a, *stack_b, tmp->content))
-			j = apply_rarrb(stack_a, stack_b, tmp->content, 'a');
-		else if (j == rrarb(*stack_a, *stack_b, tmp->content))
-			j = apply_rrarb(stack_a, stack_b, tmp->content, 'a');
-		else
-			tmp = tmp->next;
-		i++;
+		while (j >= 0)
+		{
+			if (j == rarb(*stack_a, *stack_b, tmp->content, 'b'))
+				j = apply_rarb(stack_a, stack_b, tmp->content, 'b');
+			else if (j == rrarrb(*stack_a, *stack_b, tmp->content, 'b'))
+				j = apply_rrarrb(stack_a, stack_b, tmp->content, 'b');
+			else if (j == rarrb(*stack_a, *stack_b, tmp->content, 'b'))
+				j = apply_rarrb(stack_a, stack_b, tmp->content, 'b');
+			else if (j == rrarb(*stack_a, *stack_b, tmp->content, 'b'))
+				j = apply_rrarb(stack_a, stack_b, tmp->content, 'b');
+			else
+				tmp = tmp->next;
+		}
 	}
-	ft_printf("staCkB\n");
-	ft_lstprint(*stack_b);
 }
