@@ -6,13 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 20:00:41 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 16:38:45 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 19:08:45 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-//all fixed
 
 int	rarb(t_list *stack_a, t_list *stack_b, int c, char s)
 {

@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 18:10:14 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 19:08:49 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,24 +80,23 @@ void	ft_sort_a(t_list **stack_a, t_list **stack_b)
 void	ft_sort_b(t_list **stack_a, t_list **stack_b)
 {
 	int			i;
-	int			j;
 	t_list		*tmp;
 
 	i = 0;
 	while (ft_lstsize(*stack_a) > 3 && !check_sorted(stack_a))
 	{
 		tmp = *stack_a;
-		j = count_ab(*stack_a, *stack_b);
-		while (j >= 0)
+		i = count_ab(*stack_a, *stack_b);
+		while (i >= 0)
 		{
-			if (j == rarb(*stack_a, *stack_b, tmp->content, 'b'))
-				j = apply_rarb(stack_a, stack_b, tmp->content, 'b');
-			else if (j == rrarrb(*stack_a, *stack_b, tmp->content, 'b'))
-				j = apply_rrarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (j == rarrb(*stack_a, *stack_b, tmp->content, 'b'))
-				j = apply_rarrb(stack_a, stack_b, tmp->content, 'b');
-			else if (j == rrarb(*stack_a, *stack_b, tmp->content, 'b'))
-				j = apply_rrarb(stack_a, stack_b, tmp->content, 'b');
+			if (i == rarb(*stack_a, *stack_b, tmp->content, 'b'))
+				i = apply_rarb(stack_a, stack_b, tmp->content, 'b');
+			else if (i == rrarrb(*stack_a, *stack_b, tmp->content, 'b'))
+				i = apply_rrarrb(stack_a, stack_b, tmp->content, 'b');
+			else if (i == rarrb(*stack_a, *stack_b, tmp->content, 'b'))
+				i = apply_rarrb(stack_a, stack_b, tmp->content, 'b');
+			else if (i == rrarb(*stack_a, *stack_b, tmp->content, 'b'))
+				i = apply_rrarb(stack_a, stack_b, tmp->content, 'b');
 			else
 				tmp = tmp->next;
 		}
