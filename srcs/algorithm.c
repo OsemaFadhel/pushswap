@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:35 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 17:37:22 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,6 @@ void	ft_turk(t_list **stack_a, t_list **stack_b)
 
 void	algorithm(t_list **stack_a, t_list **stack_b, int size)
 {
-	(void) stack_b;
 	if (check_sorted(stack_a) == 1)
 		ft_printf("Already sorted!\n");
 	else if (size == 2)

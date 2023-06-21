@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:22:58 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 22:01:15 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 16:25:04 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int		apply_rrarb(t_list **stack_a, t_list **stack_b, int c, char s);
 int		apply_rarrb(t_list **stack_a, t_list **stack_b, int c, char s);
 
 int		check_sorted(t_list **stack_a);
+int		check_doubles(t_list **stack_a);
 void	error(int i);
 
 #endif

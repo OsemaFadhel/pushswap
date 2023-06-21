@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:29 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 17:34:28 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int	main(int ac, char **av)
 		size = ft_add_nb2(&stack_a, av);
 	if (ac > 2)
 		size = ft_add_nb(&stack_a, av);
-	algorithm(&stack_a, &stack_b, size);
+	check_doubles(&stack_a);
 	if (!check_sorted(&stack_a))
-		error(4);
-	ft_printf("SORTED\n");
+		algorithm(&stack_a, &stack_b, size);
+	if (!check_sorted(&stack_a))
+		ft_printf("KO\n");
 	return (0);
 }
