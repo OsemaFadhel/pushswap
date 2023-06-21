@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/06/09 20:09:01 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/06/21 17:45:50 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ PRINTF_PATH	= ./printf
 
 PRINTF	= $(PRINTF_PATH)
 
-SRC	=  	push_swap.c sort.c apply_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
+SRC	=  	srcs/push_swap.c srcs/sort.c srcs/apply_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
 		srcs/rules_1.c srcs/rules_2.c srcs/rules_3.c \
 		srcs/error.c srcs/min_max.c srcs/find_place.c \
 		srcs/count_move.c

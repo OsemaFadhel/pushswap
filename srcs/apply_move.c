@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 19:19:13 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 22:11:29 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 17:39:16 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	apply_rarb(t_list **stack_a, t_list **stack_b, int c, char s)
 {

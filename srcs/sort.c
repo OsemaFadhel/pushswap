@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 22:27:41 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 17:45:29 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	count_ab(t_list *stack_a, t_list *stack_b)
 {
