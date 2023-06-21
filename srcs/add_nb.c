@@ -6,13 +6,13 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/22 00:15:47 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/22 01:23:28 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	free_split(char **tab)
+void	free_tab(char **tab)
 {
 	int	i;
 
@@ -27,8 +27,8 @@ void	free_split(char **tab)
 
 int	ft_add_nb2(t_list **stack_a, char **av)
 {
-	int		j;
-	int		nb;
+	long	j;
+	long	nb;
 	char	**tab;
 
 	j = 0;
@@ -38,6 +38,8 @@ int	ft_add_nb2(t_list **stack_a, char **av)
 		if (ft_isdigit(tab[j]))
 		{
 			nb = ft_atoi(tab[j]);
+			if (nb > 2147483647 || nb < -2147483648)
+				error(5);
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
 		}
 		else
@@ -45,19 +47,14 @@ int	ft_add_nb2(t_list **stack_a, char **av)
 		j++;
 	}
 	nb = 0;
-	while (tab[nb])
-	{
-		free(tab[nb]);
-		nb++;
-	}
-	free(tab);
-	return (j - 1);
+	free_tab(tab);
+	return (j);
 }
 
 int	ft_add_nb(t_list **stack_a, char **av)
 {
-	int		j;
-	int		nb;
+	long		j;
+	long		nb;
 
 	j = 1;
 	while (av[j])
@@ -65,6 +62,8 @@ int	ft_add_nb(t_list **stack_a, char **av)
 		if (ft_isdigit(av[j]))
 		{
 			nb = ft_atoi(av[j]);
+			if (nb > 2147483647 || nb < -2147483648)
+				error(5);
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
 		}
 		else

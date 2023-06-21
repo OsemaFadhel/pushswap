@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:25:12 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 23:57:08 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/22 01:20:06 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,7 @@ int	main(int ac, char **av)
 		algorithm(&stack_a, &stack_b, size);
 		free_stack(stack_a);
 	}
+	else if (check_sorted(&stack_a))
+		free_stack(stack_a);
 	return (0);
 }

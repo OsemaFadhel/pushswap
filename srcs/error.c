@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:11:30 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 16:26:40 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/22 01:24:00 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ void	error(int i)
 		ft_printf("Error: Duplicate argument!\n");
 	else if (i == 4)
 		ft_printf("Error: Not sorted\n");
+	else if (i == 5)
+		ft_printf("Error: INT OVERFLOW\n");
 	exit(1);
 }
