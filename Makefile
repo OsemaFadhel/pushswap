@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/06/22 01:26:24 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/06/22 01:33:37 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,10 +40,9 @@ CC	=	gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-all		: 	$(NAME)
+all		:	$(NAME)
 
-$(NAME)	:	@echo "$(COLOUR_YELLOW)Compiling...$(COLOUR_YELLOW)"
-			$(OBJ)
+$(NAME)	:	$(OBJ)
 			make -C $(PRINTF_PATH)
 			make -C $(LIBFT_PATH)
 			$(CC) $(CFLAGS) $(OBJ) $(PRINTF)/libftprintf.a $(LIBFT)/libft.a -o $(NAME)
