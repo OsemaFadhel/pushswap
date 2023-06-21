@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 17:19:01 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/20 17:13:16 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 17:57:24 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_add_nb2(t_list **stack_a, char **av)
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
 		}
 		else
-			ft_printf("Error: Invalid argument!\n");
+			error(2);
 		j++;
 	}
 	nb = 0;
@@ -51,7 +51,7 @@ int	ft_add_nb(t_list **stack_a, char **av)
 			ft_lstadd_back(stack_a, ft_lstnew(nb));
 		}
 		else
-			ft_printf("Error: Invalid argument!\n");
+			error(2);
 		j++;
 	}
 	return (j - 1);

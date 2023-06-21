@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 22:37:47 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 17:45:29 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/21 18:10:14 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	count_ab(t_list *stack_a, t_list *stack_b)
 	{
 		if (i > rarb(stack_a, stack_b, tmp->content, 'b'))
 			i = rarb(stack_a, stack_b, tmp->content, 'b');
-		if (i > rrarrb(stack_a, stack_b, tmp->content, 'b'))
-			i = rrarrb(stack_a, stack_b, tmp->content, 'b');
 		if (i > rarrb(stack_a, stack_b, tmp->content, 'b'))
 			i = rarrb(stack_a, stack_b, tmp->content, 'b');
 		if (i > rrarb(stack_a, stack_b, tmp->content, 'b'))
@@ -45,8 +43,6 @@ int	count_ba(t_list *stack_a, t_list *stack_b)
 	{
 		if (i > rarb(stack_a, stack_b, tmp->content, 'a'))
 			i = rarb(stack_a, stack_b, tmp->content, 'a');
-		if (i > rrarrb(stack_a, stack_b, tmp->content, 'a'))
-			i = rrarrb(stack_a, stack_b, tmp->content, 'a');
 		if (i > rarrb(stack_a, stack_b, tmp->content, 'a'))
 			i = rarrb(stack_a, stack_b, tmp->content, 'a');
 		if (i > rrarb(stack_a, stack_b, tmp->content, 'a'))
