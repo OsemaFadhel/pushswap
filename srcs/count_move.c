@@ -85,7 +85,7 @@ int	rarrb(t_list *stack_a, t_list *stack_b, int c, char s)
 	{
 		if (search_b(stack_a, stack_b, c, 'b'))
 			i = ft_lstsize(stack_b) - search_b(stack_a, stack_b, c, 'b');
-		i = search_index(stack_a, c) + i;
+		i += search_index(stack_a, c);
 	}
 	else if (s == 'a')
 	{
