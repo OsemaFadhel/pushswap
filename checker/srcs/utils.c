@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 23:08:35 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/23 23:23:46 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/23 23:33:54 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../checker.h"
 
 int	check_sorted(t_list **stack_a)
 {

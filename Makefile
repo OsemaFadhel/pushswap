@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/06/23 23:24:04 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/06/23 23:33:30 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ OBJ		= 	$(SRC:.c=.o)
 
 # BONUS
 
-SRC_BONUS = checker/srcs/checker.c checker/srcs/rules_1 checker/srcs/rules_2 checker/srcs/rules_3 checker/srcs/rules_4 \
+SRC_BONUS = checker/srcs/checker.c checker/srcs/rules_1.c checker/srcs/rules_2.c checker/srcs/rules_3.c checker/srcs/rules_4.c \
 			checker/gnl/get_next_line_utils.c checker/gnl/get_next_line.c checker/srcs/utils.c checker/srcs/error.c \
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)

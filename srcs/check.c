@@ -6,11 +6,11 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:49:44 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/23 23:09:40 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/23 23:27:24 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../push_swap.h"
 
 void	free_stack(t_list *stack_a)
 {
