@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/16 18:49:44 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/23 23:09:40 by ofadhel          ###   ########.fr       */
+/*   Created: 2023/06/23 23:08:35 by ofadhel           #+#    #+#             */
+/*   Updated: 2023/06/23 23:23:46 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
-void	free_stack(t_list *stack_a)
-{
-	t_list	*tmp;
-
-	while (stack_a)
-	{
-		tmp = stack_a;
-		stack_a = stack_a->next;
-		free(tmp);
-	}
-}
 
 int	check_sorted(t_list **stack_a)
 {
@@ -56,4 +44,64 @@ int	check_doubles(t_list **stack_a)
 		tmp = tmp->next;
 	}
 	return (1);
+}
+void	free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
+
+int	ft_add_nb2(t_list **stack_a, char **av)
+{
+	long	j;
+	long	nb;
+	char	**tab;
+
+	j = 0;
+	tab = ft_split(av[1], ' ');
+	while (tab[j])
+	{
+		if (ft_isdigit(tab[j]))
+		{
+			nb = ft_atoi(tab[j]);
+			if (nb > 2147483647 || nb < -2147483648)
+				error(5);
+			ft_lstadd_back(stack_a, ft_lstnew(nb));
+		}
+		else
+			error(2);
+		j++;
+	}
+	nb = 0;
+	free_tab(tab);
+	return (j);
+}
+
+int	ft_add_nb(t_list **stack_a, char **av)
+{
+	long		j;
+	long		nb;
+
+	j = 1;
+	while (av[j])
+	{
+		if (ft_isdigit(av[j]))
+		{
+			nb = ft_atoi(av[j]);
+			if (nb > 2147483647 || nb < -2147483648)
+				error(5);
+			ft_lstadd_back(stack_a, ft_lstnew(nb));
+		}
+		else
+			error(2);
+		j++;
+	}
+	return (j - 1);
 }

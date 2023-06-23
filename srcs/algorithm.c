@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 01:26:23 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/21 17:37:22 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/23 21:43:33 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,6 @@ void	sort_three(t_list **stack_a)
 
 void	ft_turk(t_list **stack_a, t_list **stack_b)
 {
-	int	i;
-
-	i = 0;
 	push_b(stack_a, stack_b);
 	if (ft_lstsize(*stack_a) > 3 && !check_sorted(stack_a))
 		push_b(stack_a, stack_b);
