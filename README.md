@@ -1,3 +1,5 @@
+# 42 SCORE
+
 <a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cld8v7vvc00060fl440nilura/project/3043105" alt="ofadhel's 42 push_swap Score" /></a>
 
 # Pushswap
@@ -36,7 +38,7 @@ The first element becomes the last one. <br />
 - rrb (reverse rotate b): Shift down all elements of stack b by 1.
 The last element becomes the first one. <br />
 - rrr : rra and rrb at the same time. <br />
-# COMPILING
+# Compiling
 
 - make: will compile push_swap <br />
 - make bonus: will compile the checker (bonus) <br />
