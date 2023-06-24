@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/06/23 23:33:30 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/06/24 19:48:48 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ PRINTF	= $(PRINTF_PATH)
 
 # SOURCES
 
-SRC		=   main.c srcs/sort.c srcs/apply_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
+SRC		=   srcs/main.c srcs/sort.c srcs/apply_move.c srcs/add_nb.c srcs/algorithm.c srcs/check.c \
 			srcs/rules_1.c srcs/rules_2.c srcs/rules_3.c srcs/rules_4.c \
 			srcs/error.c srcs/min_max.c srcs/find_place.c \
 			srcs/count_move.c
@@ -39,8 +39,8 @@ OBJ		= 	$(SRC:.c=.o)
 
 # BONUS
 
-SRC_BONUS = checker/srcs/checker.c checker/srcs/rules_1.c checker/srcs/rules_2.c checker/srcs/rules_3.c checker/srcs/rules_4.c \
-			checker/gnl/get_next_line_utils.c checker/gnl/get_next_line.c checker/srcs/utils.c checker/srcs/error.c \
+SRC_BONUS = bonus/srcs/main.c bonus/srcs/rules_1.c bonus/srcs/rules_2.c bonus/srcs/rules_3.c bonus/srcs/rules_4.c \
+			bonus/gnl/get_next_line_utils.c bonus/gnl/get_next_line.c bonus/srcs/utils.c bonus/srcs/error.c \
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 

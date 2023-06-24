@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 23:08:35 by ofadhel           #+#    #+#             */
-/*   Updated: 2023/06/23 23:33:54 by ofadhel          ###   ########.fr       */
+/*   Updated: 2023/06/24 19:39:28 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	check_doubles(t_list **stack_a)
 	}
 	return (1);
 }
+
 void	free_tab(char **tab)
 {
 	int	i;
