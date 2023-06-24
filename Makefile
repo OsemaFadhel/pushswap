@@ -6,7 +6,7 @@
 #    By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 10:25:51 by ofadhel           #+#    #+#              #
-#    Updated: 2023/06/24 19:48:48 by ofadhel          ###   ########.fr        #
+#    Updated: 2023/06/24 19:52:06 by ofadhel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,7 @@ clean	:
 				rm -rf $(OBJ_BONUS)
 
 fclean	:		clean
-				rm -rf $(NAME)
+				rm -rf $(NAME) $(BONUS)
 				@echo "$(COLOUR_RED)All clean!$(COLOUR_END)"
 
 re		:		fclean all
