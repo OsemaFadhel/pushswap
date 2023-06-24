@@ -36,3 +36,7 @@ The first element becomes the last one. <br />
 - rrb (reverse rotate b): Shift down all elements of stack b by 1.
 The last element becomes the first one. <br />
 - rrr : rra and rrb at the same time. <br />
+# COMPILING
+
+- make: will compile push_swap <br />
+- make bonus: will compile the checker (bonus) <br />
