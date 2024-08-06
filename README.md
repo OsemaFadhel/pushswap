@@ -1,6 +1,6 @@
 <h1>PushSwap</h1> <h2 align='right'>Final Grade 96/125 ✅ </h2>
 
-# Pushswap
+# Description
 The Push swap project is a very simple and a highly straightforward algorithm project:
 data must be sorted. <br />
 You have at your disposal a set of integer values, 2 stacks, and a set of instructions
