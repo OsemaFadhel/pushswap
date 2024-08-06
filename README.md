@@ -1,6 +1,4 @@
-# 42 SCORE
-
-<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cld8v7vvc00060fl440nilura/project/3043105" alt="ofadhel's 42 push_swap Score" /></a>
+<h1>PushSwap</h1> <h2 align='right'>Final Grade 96/125 ✅ </h2>
 
 # Pushswap
 The Push swap project is a very simple and a highly straightforward algorithm project:
